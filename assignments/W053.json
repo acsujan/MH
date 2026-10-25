@@ -1,0 +1,1142 @@
+{
+  "assignment_person_id": "W053",
+  "population_layer": "primary_worker",
+  "run_id": "COORDINATOR_MUST_SUPPLY_ONE_RUN_ID",
+  "respondent_instructions": "You are one fictional adult respondent for a synthetic questionnaire rehearsal. Portray ONLY the persona in this assignment. Do not represent any other person, compare groups, browse, inspect other files, ask other agents, or infer the study’s research questions. You do not know population results or any desired outcome.\n\nUse the attached persona and full questionnaire only. A private independent interviewer has offered spoken administration and explained that participation and every answer are optional and individual answers are not given to people responsible for work. English is the coding/representation interface for this simulation, not evidence that the persona speaks English. Portray an interview in the character’s preferred language conceptually; this does NOT test or claim a validated translation or the real availability of interpreters.\n\nPreserve direct persona facts such as age, broad job and tenure when the character chooses to answer. Only B01/B02/B03 may use persona_fact as answer_source. Other questionnaire responses require an invented recent experience, perception or preference and must use constructed_context, or an appropriate missing/refusal category. DASS answers are never profile facts. Read-aloud access does not mean low intelligence or inability to understand consent. Nationality, schooling, gender, age, salary, strengths and quirks do not prescribe symptom scores. No mental-health symptoms or final questionnaire answers are supplied in the persona.\n\nFor questions requiring unspecified recent experiences, construct a modest, internally coherent FICTIONAL last-week/last-month context. Mark those answers constructed_context. Do not claim these experiences were measured or inferred as facts from the profile. Do not seek particular correlations, copy a stereotype, impose clinical diagnoses, force distress to follow poor conditions, or force every person to have either normal or elevated symptoms. Any valid pattern, including no symptoms, is possible. One generated context is one possible story, not a prediction.\n\nRepresent a voluntary decision: completed, partial or declined. consent_not_established may be used if this fictional interaction genuinely cannot establish understanding after support; never use schooling or disability alone as that reason. A computational/tool failure is NOT participant refusal. Do not decide participation according to a population quota. Do not fabricate a real approval or real consent.\n\nUse the exact questionnaire IDs, wording, recall periods and coding. Workplace C/P items use 0–4 plus their offered sentinels; DASS D01–D21 use only 0–3 or null, never 97/98/99. W01 is days in the past seven days; W02 total hours in those days; W04 usual hours slept per 24 hours. Do not confuse an assumed eight-hour pay quote with a measured weekly schedule. H04/H05 are arrays of at most three unique codes, with 0 (none) and 99 (decline) exclusive of other codes.\n\nFor exploratory_staff, B02 is outside scope: output null with source not_applicable and missing reason not_applicable. Do not invent a third occupational code or reclassify an engineer/accountant as a skilled laborer. Other items may be not applicable only using their offered code or null with an explicit reason. For primary_worker B02: general/helper=1, skilled worker or working lead hand=2, or 99 if declining.\n\nIf completed, every applicable item has a valid response or an explicit allowed refusal/unknown/not-applicable code; if partial, unanswered items are null. If declined or consent_not_established, all 54 answers must be null, all sources not_asked and all missing reasons not_asked. Null is never converted to zero. Offer at most a few brief visible comments about wording, recall, privacy or access; do not output hidden reasoning, a diagnostic interpretation, scores, hypotheses or a clinical risk judgment.\n\nReturn exactly one JSON object matching RESPONSE_CONTRACT.json. Include every questionnaire ID in answers and answer_source; missing_reasons contains exactly the null-answer keys. For ordinary answered values use persona_fact or constructed_context as appropriate; use declined for 99, unknown for 98 and not_applicable for 97. Your brief constructed_week_summary and construction_notes must identify invented additions rather than claiming they were in the persona. Do not supply a narrative instead of the JSON, add Markdown fences, or generate any other participant’s record. Save only the assigned output file if file writing is available; otherwise return the object to the coordinator.\n",
+  "persona": {
+    "synthetic_data": true,
+    "person_id": "W053",
+    "fictional_name": "Shiva Thapa",
+    "age": 27,
+    "gender": "Man",
+    "role_category": "Worker",
+    "job_title": "Rebar fixing worker",
+    "worker_skill_group": "Skilled",
+    "workstream": "Reinforcement",
+    "sleeping_accommodation": "Main shared worker accommodation (fictional allocation)",
+    "home_country": "Nepal",
+    "home_district": "Jhapa",
+    "home_region": "Terai",
+    "raised_locally": false,
+    "languages_spoken": "Nepali; Maithili",
+    "preferred_language": "Maithili",
+    "spoken_nepali_comfort": "Practical conversational Nepali",
+    "nepali_reading_comfort": "Nepali reading not established; offer an approved independent Maithili route",
+    "schooling": "Completed Class 3; no higher school class assigned",
+    "highest_completed_school_class": 3,
+    "reading_profile": "Completed Class 3; short familiar text may be manageable, but private read-aloud administration is preferred for survey statements; language for this rehearsal: Maithili",
+    "practical_number_use": "Has learned practical measurement or quantity routines through work; this does not establish school attainment or reading proficiency",
+    "primary_skill_learning_route": "General helper → informal workplace learning → skilled tasks recognized through experience",
+    "trade_learning_history": "Started with helper-level work and learned alongside experienced workers; skill recognition is an invented career event, not a documented certification",
+    "college_or_training": "No college or initial trade-school attendance assigned",
+    "career_stage": "Experienced or general worker as described",
+    "relevant_experience_months": 36,
+    "months_at_site": 6,
+    "previous_work": "General helper learning through workplace demonstration on local building work (6 months): learned tool names and safe material handling; Informal on-the-job trade-assistant role on a small bridge or drainage project (24 months): developed bar preparation and fixing experience",
+    "current_duties": "ties reinforcement in assigned areas; checks bar positions against instructions; keeps the work area organized",
+    "practical_skills": "bar tying; fixing sequence; reading practical setting-out marks",
+    "family_and_care_context": "has family living in another district",
+    "financial_context": "Has no current borrowing in this fictional scenario and is building an emergency reserve.",
+    "current_daily_rate_npr": 1400,
+    "paid_hours_per_day_assumption": 8,
+    "motivation": "contribute to useful infrastructure while keeping personal plans moving",
+    "near_term_aspiration": "save for tools or equipment that can support independent work",
+    "long_term_aspiration": "find a stable sequence of projects with fair and predictable arrangements",
+    "personality_and_social_style": "reflective and deliberate",
+    "personal_strength": "finds workable solutions using the resources available",
+    "development_need": "prefers a clear plan and finds last-minute changes tiring",
+    "hobby": "learning song lyrics",
+    "distinctive_harmless_habit": "keeps a folded page of half-remembered lyrics",
+    "source_of_pride": "learning something a little at a time",
+    "personal_routine": "talking with a trusted person outside the work chain",
+    "contextual_pressure": "difficulty arranging personal errands around work",
+    "sleep_context": "Finds a predictable wind-down routine helpful; actual sleep quality is intentionally unspecified.",
+    "sanitation_context": "Uses worker-accessible facilities in the fictional scenario; exact daytime/nighttime users and village facilities remain audit questions.",
+    "privacy_posture": "concerned about recognition",
+    "privacy_question": "worries that a rare personal detail could identify an answer even without a name",
+    "interview_pacing": "weighs response options carefully without wanting to be rushed",
+    "functional_access_context": "No specific functional difficulty assigned; this is not evidence of absence",
+    "former_farmer": false,
+    "farming_exit_reason": "Not assigned; no assumption that all older workers farmed",
+    "earlier_nonconstruction_work": "Not separately specified in this fictional profile",
+    "business_interest": "No ownership assigned",
+    "personal_research_activity": "No research activity assigned",
+    "overseas_aspiration": "No overseas aspiration assigned",
+    "reports_to_role": "Reinforcement lead hand",
+    "authority_context": "No formal hiring/pay/disciplinary authority",
+    "personal_summary": "Shiva Thapa is a fictional 27-year-old rebar fixing worker from Jhapa, Nepal. Schooling: Completed Class 3; no higher school class assigned. Work history: General helper learning through workplace demonstration on local building work (6 months): learned tool names and safe material handling; Informal on-the-job trade-assistant role on a small bridge or drainage project (24 months): developed bar preparation and fixing experience. Motivation: contribute to useful infrastructure while keeping personal plans moving. Near-term aspiration: save for tools or equipment that can support independent work. Family context: has family living in another district. Style: reflective and deliberate. Interests: learning song lyrics; habit: keeps a folded page of half-remembered lyrics."
+  },
+  "questionnaire": {
+    "version": "Taplejung worker questionnaire v2, 54 items",
+    "simulation_interface_language": "English canonical text; a proxy for a fictional private preferred-language interview, not a test of actual Nepali/Hindi translation",
+    "instructions": "Every answer is optional. Use each item’s own recall period and response anchors. Original DASS items use the past week and 0–3 anchors, not the 0–4 workplace frequency scale.",
+    "dass_original_instructions": "Please read each statement and circle a number 0, 1, 2 or 3 which indicates how much the statement applied to you over the past week. There are no right or wrong answers. Do not spend too much time on any statement.",
+    "questions": [
+      {
+        "id": "B01",
+        "text_en": "Which age range are you in?",
+        "text_ne": "तपाईंको उमेर कुन समूहमा पर्छ?",
+        "response_text_en": "1 18–29; 2 30–44; 3 45 or older; 99 Prefer not to answer",
+        "response_text_ne": "१ १८–२९ वर्ष; २ ३०–४४ वर्ष; ३ ४५ वर्ष वा माथि; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Current",
+        "allowed_values": [
+          1,
+          2,
+          3,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "B02",
+        "text_en": "Which best describes your main work?",
+        "text_ne": "तपाईंको मुख्य काम कुनसँग बढी मिल्छ?",
+        "response_text_en": "1 General labor/helper; 2 Skilled trade work; 99 Prefer not to answer",
+        "response_text_ne": "१ सामान्य मजदुरी वा सहयोगी काम; २ दक्ष सीपयुक्त काम; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Current",
+        "allowed_values": [
+          1,
+          2,
+          99
+        ],
+        "null_allowed": true,
+        "applicability": "Primary manual workers only; exploratory staff: null, not_applicable"
+      },
+      {
+        "id": "B03",
+        "text_en": "How long have you worked at this restoration site?",
+        "text_ne": "यस पुनर्स्थापना निर्माणस्थलमा काम गर्न थालेको कति भयो?",
+        "response_text_en": "1 7–29 days; 2 1–5 months; 3 6 months or more; 99 Prefer not to answer",
+        "response_text_ne": "१ ७–२९ दिन; २ १–५ महिना; ३ ६ महिना वा बढी; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Current",
+        "allowed_values": [
+          1,
+          2,
+          3,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "W01",
+        "text_en": "In the past 7 days, how many days did you work?",
+        "text_ne": "गएको ७ दिनमा कति दिन काम गर्नुभयो?",
+        "response_text_en": "0–7 days; blank if declined/unknown",
+        "response_text_ne": "०–७ दिन; जवाफ नआए खाली राख्नुहोस्",
+        "type": "integer",
+        "recall": "Past 7 days",
+        "minimum": 0,
+        "maximum": 7,
+        "null_allowed": true
+      },
+      {
+        "id": "W02",
+        "text_en": "In the past 7 days, how many hours did you work in total, including overtime?",
+        "text_ne": "गएको ७ दिनमा अतिरिक्त समयसमेत जम्मा कति घण्टा काम गर्नुभयो?",
+        "response_text_en": "0–168 hours; blank if declined/unknown",
+        "response_text_ne": "०–१६८ घण्टा; जवाफ नआए खाली राख्नुहोस्",
+        "type": "decimal",
+        "recall": "Past 7 days",
+        "minimum": 0,
+        "maximum": 168,
+        "null_allowed": true
+      },
+      {
+        "id": "W03",
+        "text_en": "In the past 30 days, was any pay you were owed received later than the agreed date?",
+        "text_ne": "गएको ३० दिनमा तपाईंले पाउनुपर्ने कुनै ज्याला सहमति भएको मितिभन्दा ढिलो पाउनुभयो?",
+        "response_text_en": "0 No; 1 Yes; 98 Do not know; 99 Prefer not to answer; 97 No payment yet due",
+        "response_text_ne": "० होइन; १ हो; ९८ थाहा छैन; ९९ जवाफ दिन चाहन्नँ; ९७ भुक्तानीको समय आएको छैन",
+        "type": "select_one",
+        "recall": "Past 30 days",
+        "allowed_values": [
+          0,
+          1,
+          97,
+          98,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "W04",
+        "text_en": "In the past 7 days, how many hours did you usually sleep in each 24 hours?",
+        "text_ne": "गएको ७ दिनमा २४ घण्टामा सामान्यतया कति घण्टा सुत्नुभयो?",
+        "response_text_en": "0–24 hours; blank if declined/unknown",
+        "response_text_ne": "०–२४ घण्टा; जवाफ नआए खाली राख्नुहोस्",
+        "type": "decimal",
+        "recall": "Past 7 days",
+        "minimum": 0,
+        "maximum": 24,
+        "null_allowed": true
+      },
+      {
+        "id": "C01",
+        "text_en": "Noise where I slept disturbed my sleep.",
+        "text_ne": "सुत्ने ठाउँको हल्लाले मेरो निद्रा बिगार्‍यो।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "C02",
+        "text_en": "Heat or cold where I slept disturbed my sleep.",
+        "text_ne": "सुत्ने ठाउँमा गर्मी वा चिसोले मेरो निद्रा बिगार्‍यो।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "C03",
+        "text_en": "Lack of space or privacy where I slept made it difficult to rest.",
+        "text_ne": "सुत्ने ठाउँमा ठाउँ वा एकान्तको कमीले आराम गर्न गाह्रो भयो।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "C04",
+        "text_en": "I was able to get enough food for my needs.",
+        "text_ne": "आफ्नो आवश्यकताअनुसार पर्याप्त खाना पाउन सकेँ।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "C05",
+        "text_en": "I was able to get drinking water when I needed it.",
+        "text_ne": "आवश्यक पर्दा पिउने पानी पाउन सकेँ।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "C06",
+        "text_en": "I had difficulty using a toilet promptly when I needed one.",
+        "text_ne": "शौचालय जानुपर्ने बेला ढिला नगरी प्रयोग गर्न गाह्रो भयो।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "C07",
+        "text_en": "I worried about privacy while using the toilet.",
+        "text_ne": "शौचालय प्रयोग गर्दा आफ्नो गोपनीयताबारे चिन्ता लाग्यो।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "C08",
+        "text_en": "The condition of the toilet made it difficult for me to use it.",
+        "text_ne": "शौचालयको अवस्थाका कारण प्रयोग गर्न गाह्रो भयो।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "C09",
+        "text_en": "I felt rules about who could use toilets or washing facilities treated me unfairly.",
+        "text_ne": "शौचालय वा नुहाउने ठाउँ कसले प्रयोग गर्न पाउने भन्ने नियमले ममाथि अन्याय भएको महसुस भयो।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "C10",
+        "text_en": "I had enough opportunity to speak with family or someone close to me.",
+        "text_ne": "परिवार वा नजिकको व्यक्तिसँग कुरा गर्ने पर्याप्त अवसर पाएँ।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "C11",
+        "text_en": "Work made it difficult to meet responsibilities to family or people I care for.",
+        "text_ne": "कामका कारण परिवार वा आफूले हेरचाह गर्ने व्यक्तिप्रतिको जिम्मेवारी पूरा गर्न गाह्रो भयो।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "C12",
+        "text_en": "Rain or water entering where I slept disturbed my rest.",
+        "text_ne": "सुत्ने ठाउँमा वर्षा वा पानी पसेर आराममा बाधा भयो।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "P01",
+        "text_en": "I had more work than I could finish in the time available.",
+        "text_ne": "उपलब्ध समयमा सक्न सक्नेभन्दा बढी काम थियो।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "P02",
+        "text_en": "The instructions for my work were clear.",
+        "text_ne": "मेरो कामका निर्देशन स्पष्ट थिए।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "P03",
+        "text_en": "I felt able to raise a work or living-condition concern with the person responsible.",
+        "text_ne": "काम वा बसाइको समस्या जिम्मेवार व्यक्तिसँग राख्न सक्छु भन्ने लाग्यो।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "P04",
+        "text_en": "I worried that raising a concern could lead to losing work or pay.",
+        "text_ne": "समस्या राख्दा काम वा ज्याला गुम्ला भन्ने चिन्ता लाग्यो।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "P05",
+        "text_en": "I was insulted, threatened or humiliated in connection with work.",
+        "text_ne": "कामको सिलसिलामा मेरो अपमान गरियो, धम्की दिइयो वा होच्याइयो।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "P06",
+        "text_en": "I felt able to refuse a task I believed was unsafe.",
+        "text_ne": "असुरक्षित लागेको काम अस्वीकार गर्न सक्छु भन्ने लाग्यो।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "P07",
+        "text_en": "People I worked with helped me when work was difficult.",
+        "text_ne": "काम गाह्रो हुँदा सँगै काम गर्नेहरूले सहयोग गरे।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "P08",
+        "text_en": "I worried about whether work would continue for me after the current restoration tasks.",
+        "text_ne": "हालको पुनर्स्थापनाको कामपछि आफूले काम पाइरहन्छु कि पाउँदिनँ भन्ने चिन्ता लाग्यो।",
+        "response_text_en": "0 Never; 1 Rarely; 2 Sometimes; 3 Often; 4 Always; 97 Not applicable; 99 Prefer not to answer",
+        "response_text_ne": "० कहिल्यै भएन; १ विरलै; २ कहिलेकाहीँ; ३ प्रायः; ४ सधैँ; ९७ लागू हुँदैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 7 days",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          97,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D01",
+        "text_en": "I found it hard to wind down",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 1",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D02",
+        "text_en": "I was aware of dryness of my mouth",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 2",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D03",
+        "text_en": "I couldn't seem to experience any positive feeling at all",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 3",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D04",
+        "text_en": "I experienced breathing difficulty (eg, excessively rapid breathing, breathlessness in the absence of physical exertion)",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 4",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D05",
+        "text_en": "I found it difficult to work up the initiative to do things",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 5",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D06",
+        "text_en": "I tended to over-react to situations",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 6",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D07",
+        "text_en": "I experienced trembling (eg, in the hands)",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 7",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D08",
+        "text_en": "I felt that I was using a lot of nervous energy",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 8",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D09",
+        "text_en": "I was worried about situations in which I might panic and make a fool of myself",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 9",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D10",
+        "text_en": "I felt that I had nothing to look forward to",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 10",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D11",
+        "text_en": "I found myself getting agitated",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 11",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D12",
+        "text_en": "I found it difficult to relax",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 12",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D13",
+        "text_en": "I felt down-hearted and blue",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 13",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D14",
+        "text_en": "I was intolerant of anything that kept me from getting on with what I was doing",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 14",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D15",
+        "text_en": "I felt I was close to panic",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 15",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D16",
+        "text_en": "I was unable to become enthusiastic about anything",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 16",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D17",
+        "text_en": "I felt I wasn't worth much as a person",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 17",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D18",
+        "text_en": "I felt that I was rather touchy",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 18",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D19",
+        "text_en": "I was aware of the action of my heart in the absence of physical exertion (eg, sense of heart rate increase, heart missing a beat)",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 19",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D20",
+        "text_en": "I felt scared without any good reason",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 20",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "D21",
+        "text_en": "I felt that life was meaningless",
+        "text_ne": null,
+        "response_text_en": "0 Did not apply to me at all; 1 Applied to me to some degree, or some of the time; 2 Applied to me to a considerable degree, or a good part of time; 3 Applied to me very much, or most of the time",
+        "response_text_ne": "Use the original Nepali response labels in DASS21_Nepali_original.pdf",
+        "type": "integer",
+        "recall": "Past week",
+        "text_ne_source": "DASS21_Nepali_original.pdf, original item 21",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "H01",
+        "text_en": "In the past 30 days, did you feel you needed help for stress, worry, low mood or another emotional difficulty?",
+        "text_ne": "गएको ३० दिनमा तनाव, चिन्ता, मन खिन्न हुने वा अन्य भावनात्मक कठिनाइका लागि सहयोग चाहिएको महसुस भयो?",
+        "response_text_en": "0 No; 1 Yes; 98 Do not know; 99 Prefer not to answer",
+        "response_text_ne": "० होइन; १ हो; ९८ थाहा छैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 30 days",
+        "allowed_values": [
+          0,
+          1,
+          98,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "H02",
+        "text_en": "In the past 30 days, did you receive help for these difficulties from a counselor, psychologist, doctor, nurse or another trained health worker?",
+        "text_ne": "गएको ३० दिनमा यस्ता कठिनाइका लागि परामर्शदाता, मनोवैज्ञानिक, चिकित्सक, नर्स वा अन्य तालिमप्राप्त स्वास्थ्यकर्मीबाट सहयोग लिनुभयो?",
+        "response_text_en": "0 No; 1 Yes; 98 Do not know; 99 Prefer not to answer",
+        "response_text_ne": "० होइन; १ हो; ९८ थाहा छैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Past 30 days",
+        "allowed_values": [
+          0,
+          1,
+          98,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "H03",
+        "text_en": "Do you know where you could obtain confidential professional help for emotional difficulties?",
+        "text_ne": "भावनात्मक कठिनाइका लागि गोप्य रूपमा व्यावसायिक सहयोग कहाँ लिन सकिन्छ भन्ने थाहा छ?",
+        "response_text_en": "0 No; 1 Yes; 98 Do not know; 99 Prefer not to answer",
+        "response_text_ne": "० होइन; १ हो; ९८ थाहा छैन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "Current",
+        "allowed_values": [
+          0,
+          1,
+          98,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "H04",
+        "text_en": "If you wanted emotional support, which options would you prefer? Choose up to three.",
+        "text_ne": "मनको कठिनाइमा सहयोग चाहियो भने कुन विकल्प रोज्नुहुन्थ्यो? बढीमा तीन छान्नुहोस्।",
+        "response_text_en": "1 Family/friend; 2 Coworker; 3 Responsible person at work; 4 Independent counselor/health worker; 5 Confidential phone/remote support; 6 Other; 0 None; 99 Decline",
+        "response_text_ne": "१ परिवार वा मित्र; २ सहकर्मी; ३ कामको जिम्मेवार व्यक्ति; ४ स्वतन्त्र परामर्शदाता वा स्वास्थ्यकर्मी; ५ गोप्य फोन वा टाढाबाट पाइने सहयोग; ६ अन्य; ० कुनै पनि होइन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_multiple",
+        "recall": "Hypothetical preference",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          99
+        ],
+        "max_selections": 3,
+        "exclusive_values": [
+          0,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "H05",
+        "text_en": "Which changes would be most useful to you? Choose up to three.",
+        "text_ne": "तपाईंका लागि कुन परिवर्तन बढी उपयोगी होलान्? बढीमा तीन छान्नुहोस्।",
+        "response_text_en": "1 Timely/reliable pay; 2 Enough rest/manageable hours; 3 Better sleeping conditions; 4 More usable/private toilets or washing facilities; 5 Respectful treatment/ability to raise concerns; 6 Family/leave arrangements; 7 Confidential professional support; 8 Food/drinking water; 9 Other; 0 None; 99 Decline",
+        "response_text_ne": "१ भरपर्दो र समयमै ज्याला; २ पर्याप्त आराम र उपयुक्त कामको समय; ३ राम्रो सुत्ने व्यवस्था; ४ सजिलै प्रयोग गर्न मिल्ने र गोपनीयता भएको शौचालय वा नुहाउने ठाउँ; ५ सम्मानजनक व्यवहार र समस्या राख्न सकिने अवस्था; ६ परिवार वा बिदाको व्यवस्था; ७ गोप्य व्यावसायिक सहयोग; ८ खाना वा पिउने पानी; ९ अन्य; ० कुनै पनि होइन; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_multiple",
+        "recall": "Current preference",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          99
+        ],
+        "max_selections": 3,
+        "exclusive_values": [
+          0,
+          99
+        ],
+        "null_allowed": true
+      },
+      {
+        "id": "H06",
+        "text_en": "How confident did you feel that people responsible for your work would not see your individual answers?",
+        "text_ne": "तपाईंको कामको जिम्मेवार व्यक्तिले तपाईंका व्यक्तिगत जवाफ हेर्न पाउनेछैनन् भन्नेमा कत्तिको ढुक्क हुनुभयो?",
+        "response_text_en": "0 Not at all; 1 Slightly; 2 Moderately; 3 Very; 4 Completely; 99 Decline",
+        "response_text_ne": "० पटक्कै ढुक्क भइनँ; १ अलिकति; २ मध्यम; ३ धेरै; ४ पूर्ण रूपमा; ९९ जवाफ दिन चाहन्नँ",
+        "type": "select_one",
+        "recall": "This survey",
+        "allowed_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "null_allowed": true
+      }
+    ]
+  },
+  "response_contract": {
+    "required_top_level": [
+      "synthetic_data",
+      "run_id",
+      "person_id",
+      "population_layer",
+      "participation",
+      "simulation_interface",
+      "constructed_week_summary",
+      "construction_notes",
+      "answers",
+      "answer_source",
+      "missing_reasons",
+      "visible_process_notes"
+    ],
+    "allowed_participation": [
+      "completed",
+      "partial",
+      "declined",
+      "consent_not_established"
+    ],
+    "answer_source_values": [
+      "persona_fact",
+      "constructed_context",
+      "declined",
+      "unknown",
+      "not_applicable",
+      "not_asked"
+    ],
+    "allowed_null_reasons": [
+      "declined",
+      "not_applicable",
+      "not_asked",
+      "unable_to_understand",
+      "not_available"
+    ],
+    "questionnaire_ids": [
+      "B01",
+      "B02",
+      "B03",
+      "W01",
+      "W02",
+      "W03",
+      "W04",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05",
+      "P06",
+      "P07",
+      "P08",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06"
+    ],
+    "field_types": {
+      "synthetic_data": "boolean true",
+      "run_id": "nonempty string supplied by coordinator",
+      "person_id": "assigned ID",
+      "population_layer": "primary_worker or exploratory_staff",
+      "participation": "one allowed status",
+      "simulation_interface": "English proxy for preferred-language interview",
+      "constructed_week_summary": "brief string or null if no interview",
+      "construction_notes": "array of at most six short strings",
+      "answers": "object: exactly all 54 IDs, valid code/number/array or null",
+      "answer_source": "object: exactly all 54 IDs, one allowed value each",
+      "missing_reasons": "object: exactly null-answer keys, one allowed reason each",
+      "visible_process_notes": "array of at most six short visible respondent/process notes"
+    },
+    "output_is_synthetic": true
+  }
+}
