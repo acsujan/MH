@@ -1,0 +1,12 @@
+{
+  "run_id": "TRIAL_001",
+  "synthetic_data": true,
+  "start_time_utc": "2026-10-25T01:04:31Z",
+  "coordinator_model": "claude-sonnet-5-5 (as reported by runtime)",
+  "respondent_model": "same model family as coordinator via Agent tool general-purpose subagents; exact per-agent model not exposed",
+  "runtime_tool": "Claude Code (cloud session), Agent tool",
+  "settings": null,
+  "concurrency_plan": "batches of ~10 parallel respondent agents; pilot batch first, then increase if stable",
+  "language_mode": "English proxy for preferred-language interview",
+  "isolation_limitations": "Each respondent agent is a fresh subagent given only its own payload path and output path. Agents share the same filesystem and tools, so isolation is instruction-level, not a security sandbox; agents could technically read other files. Payload files are staged outside the repo."
+}
